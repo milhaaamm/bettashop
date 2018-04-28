@@ -23,7 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$servername = filter_input(INPUT_SERVER,"SERVER_NAME");
+$port = filter_input(INPUT_SERVER,"SERVER_PORT");
+$config['base_url'] = 'http://'.$servername.':'.$port.'/bettashop/';
 
 /*
 |--------------------------------------------------------------------------
