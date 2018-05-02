@@ -6,16 +6,25 @@ class Forum extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url');
 	}
 
 	public function index()
 	{
-		$this->load->view('dashboard_view');
+		redirect(site_url('Dashboard/threads'));
 	}
 
-	public function logout()
+	public function listthread()
 	{
-		redirect(base_url());
+		$this->load->model('Thread_Model');
+		$idcategory = $this->uri->segment('3');
+		$categorydata['records'] = $this->Thread_Model->get_list_by_id($idcategory);
+		$data['activetab'] = 'threads';
+		$this->load->view('template/dashboard_header');
+		$this->load->view('template/dashboard_nav',$data);
+		$this->load->view('template/dashboard_breadcrumb');
+		$this->load->view('forum_threadlist',$categorydata);
+		$this->load->view('template/dashboard_footer');
 	}
 }
 ?>

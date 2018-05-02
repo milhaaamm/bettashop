@@ -22,9 +22,13 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->library('session');
 	}
 	public function index()
 	{
-		$this->load->view('landing');
+		if(!$this->session->userdata('logged'))
+			$this->load->view('landing');
+		else
+			redirect(site_url('Dashboard'));
 	}
 }

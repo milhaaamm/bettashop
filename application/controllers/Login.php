@@ -24,7 +24,7 @@ class Login extends CI_Controller
 		if($this->User_Model->check_login($datalogin))
 		{
 			$level = $this->User_Model->get_user_level($datalogin);
-			$this->session->set_userdata('username',$username);
+			$this->session->set_userdata('username',$datalogin['username']);
 			$this->session->set_userdata('logged',1);
 			$this->session->set_userdata('level',$level);
 			redirect(site_url('dashboard'));

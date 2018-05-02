@@ -51,6 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-$route['route'] = 'Route';
-//$route['dashboard'] = 'Dashboard';
+$route['translate_uri_dashes'] = TRUE;
+$route['Dashboard/threads/(:any)/sortby=(:any)&order=(:any)'] = 'Dashboard/threads_listbyidcat/$1/$2/$3';
+$route['Dashboard/threads/(:any)/sortby=(:any)'] = 'Dashboard/threads_listbyidcat/$1/$2';
+$route['Dashboard/threads/(:any)'] = 'Dashboard/threads_listbyidcat/$1';
+$route['Dashboard/thread/(:num)'] = 'Dashboard/threads_openthread/$1';
