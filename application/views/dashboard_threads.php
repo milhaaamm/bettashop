@@ -20,17 +20,17 @@
 								<li class="list-group-item">
 									<strong><a href="<?=site_url('Dashboard/threads/bettashop-news.1');?>">BettaShop News</a></strong>
 									<p>Discussion : 888 | Messages : 888 | Sub-Forums : 2</p>
-									<a href="#">Events</a>|<a href="#">Bug n Fix</a>
+									<a href="<?=site_url('Dashboard/threads/bettashop-events.11');?>">Events</a>|<a href="<?=site_url('Dashboard/threads/bettashop-bugnfix.12');?>">Bug n Fix</a>
 								</li>
 								<li class="list-group-item">
-									<strong><a href="#">BettaShop Announcement</a></strong>
+									<strong><a href="<?=site_url('Dashboard/threads/bettashop-announce.2');?>">BettaShop Announcement</a></strong>
 									<p>Discussion : 888 | Messages : 888 | Sub-Forums : 2</p>
-									<a href="#">Contest</a>|<a href="#">Vacancy</a>
+									<a href="<?=site_url('Dashboard/threads/21');?>">Contest</a>|<a href="<?=site_url('Dashboard/threads/22');?>">Vacancy</a>
 								</li>
 								<li class="list-group-item">
-									<strong><a href="#">BettaShop Resources</a></strong>
+									<strong><a href="<?=site_url('Dashboard/threads/bettashop-resources.3');?>">BettaShop Resources</a></strong>
 									<p>Discussion : 888 | Messages : 888 | Sub-Forums : 2</p>
-									<a href="#">Forum Guide</a>|<a href="#">Help</a>
+									<a href="<?=site_url('Dashboard/threads/31');?>">Forum Guide</a>|<a href="<?=site_url('Dashboard/threads/32');?>">Help</a>
 								</li>
 							</ul>
 						</div>
@@ -42,19 +42,19 @@
 						<div class="panel-body">
 							<ul class="list-group">
 								<li class="list-group-item">
-									<strong><a href="#">Food</a></strong>
+									<strong><a href="<?=site_url('Dashboard/threads/4');?>">Food</a></strong>
 									<p>Discussion : 888 | Messages : 888 | Sub-Forums : 2</p>
-									<a href="#">Generic</a>|<a href="#">Nature</a>
+									<a href="<?=site_url('Dashboard/threads/41');?>">Generic</a>|<a href="<?=site_url('Dashboard/threads/42');?>">Nature</a>
 								</li>
 								<li class="list-group-item">
-									<strong><a href="#">Treatment</a></strong>
+									<strong><a href="<?=site_url('Dashboard/threads/5');?>">Treatment</a></strong>
 									<p>Discussion : 888 | Messages : 888 | Sub-Forums : 2</p>
-									<a href="#">Beauty</a>|<a href="#">Medic</a>
+									<a href="<?=site_url('Dashboard/threads/51');?>">Beauty</a>|<a href="<?=site_url('Dashboard/threads/52');?>">Medic</a>
 								</li>
 								<li class="list-group-item">
-									<strong><a href="#">Nutritient</a></strong>
+									<strong><a href="<?=site_url('Dashboard/threads/6');?>">Nutritient</a></strong>
 									<p>Discussion : 888 | Messages : 888 | Sub-Forums : 2</p>
-									<a href="#">Grade A</a>|<a href="#">Grade B</a>
+									<a href="<?=site_url('Dashboard/threads/61');?>">Grade A</a>|<a href="<?=site_url('Dashboard/threads/62');?>">Grade B</a>
 								</li>
 							</ul>
 						</div>

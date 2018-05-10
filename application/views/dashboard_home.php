@@ -136,7 +136,7 @@
 				</div>
 			</div>
 			<div class="col-sm-4">
-				<div class="page-header">
+				<!--<div class="page-header">
 					<h2>Top Up</h2>
 				</div>
 				<div class="panel panel-info">
@@ -168,6 +168,6 @@
 							</div>
 						</form>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>

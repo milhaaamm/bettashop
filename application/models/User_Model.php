@@ -42,5 +42,14 @@
 			$this->db->insert($this->profiletable,$datauser);
 			return true;
 		}
+
+		public function get_userimgpath_byresult($resultpage)
+		{
+			$img_path = [];
+			foreach ($resultpage as $eachrow => $eachmsg):
+				$img_path[$eachmsg->id] = base_url().'assets/user/imgprofile/'.$eachmsg->msgauthor.'.jpg';
+			endforeach;
+			return $img_path;
+		}
 	}
 ?>

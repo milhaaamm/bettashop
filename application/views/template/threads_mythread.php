@@ -13,7 +13,7 @@
 					else:
 						foreach ($mythread as $eachthread):
 						?>
-					<a href="#" class="list-group-item list-group-item-warning">
+					<a href="<?=site_url('Dashboard/thread/'.$eachthread->threadid)?>" class="list-group-item list-group-item-warning">
 						<h4 class="list-group-item-heading"><?=$eachthread->title?></h4>
 						<p class="list-group-item-text"><?=$eachthread->descriptionsum?></p>
 						<p class="list-group-item-footer">Views:<?=$eachthread->views?>|Replies:<?=$eachthread->replies?></p>

@@ -33,8 +33,13 @@
 		public function get_thread_data($thid)
 		{
 			$query = $this->db->get_where($this->thtable,array('threadid'=>$thid));
-			$result = $query->result();
-			return $result->row();
+			return $query->row();
+		}
+
+		public function get_category_name($id)
+		{
+			$query = $this->db->get_where($this->cattable,array('catid'=>$id));
+			return $query->row()->catname;
 		}
 	}
 ?>

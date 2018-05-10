@@ -1,0 +1,6 @@
+<h3>Halo ini berada di dalam konten message</h3>
+<p>Aku sedang mengetes </p>
+<br>
+<b>Bagaimana tampilan</b>
+<i>HTML</i>
+<u>Nya</u>

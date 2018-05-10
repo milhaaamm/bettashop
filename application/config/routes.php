@@ -56,3 +56,4 @@ $route['Dashboard/threads/(:any)/sortby=(:any)&order=(:any)'] = 'Dashboard/threa
 $route['Dashboard/threads/(:any)/sortby=(:any)'] = 'Dashboard/threads_listbyidcat/$1/$2';
 $route['Dashboard/threads/(:any)'] = 'Dashboard/threads_listbyidcat/$1';
 $route['Dashboard/thread/(:num)'] = 'Dashboard/threads_openthread/$1';
+$route['Dashboard/bio/(:any)'] = 'Dashboard/bio/$1';
