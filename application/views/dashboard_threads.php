@@ -6,7 +6,7 @@
 							<h2>Forum</h2>
 						</div>
 						<div class="col-sm-2">
-							<h2><a href="#" class="btn btn-success btn-block">Create Thread <span class="glyphicon glyphicon-pencil"></span></a></h2>
+							<h2><a href="<?=site_url('Dashboard/thread/create')?>" class="btn btn-success btn-block">Create Thread <span class="glyphicon glyphicon-pencil"></span></a></h2>
 						</div>
 					</div>
 				</div>

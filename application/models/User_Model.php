@@ -51,5 +51,25 @@
 			endforeach;
 			return $img_path;
 		}
+
+		public function get_allmember($sort=null,$order=null)
+		{
+			$this->db->from($this->profiletable);
+			if($sort != null):
+				$this->db->order_by($sort,$order);
+			else:
+
+			endif;
+			$query = $this->db->get();
+			return $query->result();
+		}
+
+		public function get_allstaff()
+		{
+			$this->db->from($this->authtable);
+			$this->db->where('level !=',1);
+			$query = $this->db->get();
+			return $query->result();
+		}
 	}
 ?>

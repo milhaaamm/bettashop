@@ -19,17 +19,17 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
-				<ul class="nav nav-pills nav-justified">
-					<li class="active"><a href="#aboutpill" data-toggle="pill">About</a></li>
-					<li><a href="#friendpill" data-toggle="pill">Friend</a></li>
-					<li><a href="#billingpill" data-toggle="pill">Billing</a></li>
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active"><a href="#abouttab" data-toggle="tab">About</a></li>
+					<li><a href="#friendtab" data-toggle="tab">Friend</a></li>
+					<li><a href="#billingtab" data-toggle="tab">Transaction</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="tab-content">
-					<div id="aboutpill" class="tab-pane fade in active">
+					<div id="abouttab" class="tab-pane fade in active">
 						<div class="row">
 							<div class="col-sm-6">
 								<div class="panel panel-info">
@@ -52,20 +52,8 @@
 											<div class="col-sm-10"><p>: <?=$username?></p></div>
 										</div>
 										<div class="row">
-											<div class="col-sm-2"><label>Address</label></div>
-											<div class="col-sm-10"><p>: <?=$address?></p></div>
-										</div>
-										<div class="row">
-											<div class="col-sm-2"><label>City</label></div>
-											<div class="col-sm-10"><p>: <?=$city?></p></div>
-										</div>
-										<div class="row">
-											<div class="col-sm-2"><label>Province</label></div>
-											<div class="col-sm-10"><p>: <?=$province?></p></div>
-										</div>
-										<div class="row">
-											<div class="col-sm-2"><label>State</label></div>
-											<div class="col-sm-10"><p>: <?=$state?></p></div>
+											<div class="col-sm-2"><label>Location</label></div>
+											<div class="col-sm-10"><p>: <?=$location?></p></div>
 										</div>
 										<div class="row">
 											<div class="col-sm-2"><label>Phone Number</label></div>
@@ -86,7 +74,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="friendpill" class="tab-pane fade out">
+					<div id="friendtab" class="tab-pane fade out">
 						<div class="panel panel-info">
 							<div class="panel-heading">
 								<div class="page-header">
@@ -127,7 +115,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="billingpill" class="tab-pane fade out">
+					<div id="billingtab" class="tab-pane fade out">
 						<div class="panel panel-info">
 							<div class="panel-heading">
 								<div class="page-header">

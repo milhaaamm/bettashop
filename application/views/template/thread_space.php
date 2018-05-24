@@ -81,6 +81,7 @@
 					?>
 				</ul>
 			</div>
+						<a href="#" class="btn btn-primary btn-lg">Add Message / Replies</a>
 		</div>
 	</div>
 	<div class="panel-footer">

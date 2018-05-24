@@ -56,4 +56,12 @@ $route['Dashboard/threads/(:any)/sortby=(:any)&order=(:any)'] = 'Dashboard/threa
 $route['Dashboard/threads/(:any)/sortby=(:any)'] = 'Dashboard/threads_listbyidcat/$1/$2';
 $route['Dashboard/threads/(:any)'] = 'Dashboard/threads_listbyidcat/$1';
 $route['Dashboard/thread/(:num)'] = 'Dashboard/threads_openthread/$1';
-$route['Dashboard/bio/(:any)'] = 'Dashboard/bio/$1';
+$route['Dashboard/thread/create'] = 'Dashboard/createthread';
+$route['Dashboard/profile/(:any)'] = 'Dashboard/profile/$1';
+$route['Dashboard/shop/category/(:any)'] = 'Dashboard/shopcategory/$1';
+$route['Dashboard/shop/item/(:any)'] = 'Dashboard/shopitem/$1';
+$route['Dashboard/shop/cart'] = 'Dashboard/cart';
+$route['Dashboard/shop/transaction'] = 'Dashboard/transaction';
+$route['Dashboard/shop/(:any)'] = 'Dashboard/redirect';
+$route['Dashboard/members/(:any)'] = 'Dashboard/user/$1';
+$route['Dashboard/user'] = 'Dashboard/redirect';

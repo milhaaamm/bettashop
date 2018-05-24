@@ -14,10 +14,5 @@
 <body>
 	<div class="container-fluid">
 		<br>
-		<div class="page-header">
-			<div class="row">
-				<div class="col-sm-12">
-					<center><h1>BettaShop<br><small>Get to know others through Betta Fish</small></h1><center>
-				</div>
-			</div>
-		</div>
+		<br>
+		<br>

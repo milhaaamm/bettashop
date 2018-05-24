@@ -22,20 +22,8 @@
 							<div class="col-sm-10"><p>: <?=$username?></p></div>
 						</div>
 						<div class="row">
-							<div class="col-sm-2"><label>Address</label></div>
-							<div class="col-sm-10"><p>: <?=$address?></p></div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2"><label>City</label></div>
-							<div class="col-sm-10"><p>: <?=$city?></p></div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2"><label>Province</label></div>
-							<div class="col-sm-10"><p>: <?=$province?></p></div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2"><label>State</label></div>
-							<div class="col-sm-10"><p>: <?=$state?></p></div>
+							<div class="col-sm-2"><label>Location</label></div>
+							<div class="col-sm-10"><p>: <?=$location?></p></div>
 						</div>
 					</div>
 				</div>
@@ -43,6 +31,7 @@
 			<div class="col-sm-2">
 			</div>
 		</div>
+		<!--
 		<div class="row">
 			<div class="col-sm-12">
 				<ul class="nav nav-pills nav-justified">
@@ -167,6 +156,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 	</div>
 </div>

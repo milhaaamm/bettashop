@@ -25,6 +25,15 @@ class Dashboard extends CI_Controller
 		redirect(site_url('Dashboard/home'));
 	}
 
+	public function redirect()
+	{
+		$this->load->helper('url');
+		$lastsegment = $this->uri->segment(2);
+		redirect(site_url('Dashboard/'.$lastsegment));
+	}
+//========================================================================================================================//
+//Fungsi Berhubungan Dengan Home==========================================================================================//
+//========================================================================================================================//
 	public function home()
 	{
 		$data['activetab'] = 'home';
@@ -40,23 +49,77 @@ class Dashboard extends CI_Controller
 //========================================================================================================================//
 	public function shop()
 	{
-		$data['activetab'] = 'shop';
+		$data['activetab'] = 'listitem';
+		$this->load->model('Shop_Model');
+		$data['allcat'] = $this->Shop_Model->get_all_category();
+		foreach($data['allcat'] as $row => $column):
+			$data2['catname'][$column->id] = $column->nama;
+			$data2['alldata'][$column->id] = $this->Shop_Model->get_list_item($column->id,array('id','DESC'),array(0,4));
+			
+		endforeach;
 		$this->load->view('template/dashboard_header');
 		$this->load->view('template/dashboard_nav',$data);
 		$this->load->view('template/dashboard_breadcrumb');
-		$this->load->view('dashboard_shop');
+		$this->load->view('dashboard_shop',$data2);
+		$this->load->view('template/dashboard_footer');
+
+	}
+
+	public function shopitem($iditem)
+	{
+		$current['activetab'] = 'listitem';
+		$this->load->view('template/dashboard_header');
+		$this->load->view('template/dashboard_nav',$current);
+		$this->load->view('template/dashboard_breadcrumb');
+		$this->load->model('Shop_Model');
+		$data['item'] = $this->Shop_Model->get_item_by_id($iditem);
+		$this->load->view('template/itemshop_space',$data);
+		$this->load->view('template/dashboard_footer');
+	}
+
+	public function shopcategory($idcategory)
+	{
+		$current['activetab'] = 'listitem';
+		$this->load->view('template/dashboard_header');
+		$this->load->view('template/dashboard_nav',$current);
+		$this->load->view('template/dashboard_breadcrumb');
+		$this->load->model('Shop_Model');
+		$data['catdetail'] = $this->Shop_Model->get_category_detail($idcategory);
+		$data['item'] = $this->Shop_Model->get_list_item($idcategory,array('id','DESC'),array(0,12));
+		$this->load->view('shop_category',$data);
+		$this->load->view('template/dashboard_footer');
+	}
+
+	public function cart()
+	{
+		$current['activetab'] = 'cart';
+		$this->load->view('template/dashboard_header');
+		$this->load->view('template/dashboard_nav',$current);
+		$this->load->view('template/dashboard_breadcrumb');
+		$this->load->view('shop_cart');
+		$this->load->view('template/dashboard_footer');
+
+	}
+
+	public function transaction($idcart=null,$iditem=null)
+	{
+		$current['activetab'] = 'shop';
+		$this->load->view('template/dashboard_header');
+		$this->load->view('template/dashboard_nav',$current);
+		$this->load->view('template/dashboard_breadcrumb');
+		$this->load->view('shop_transaction');
 		$this->load->view('template/dashboard_footer');
 
 	}
 
 //========================================================================================================================//
-//Fungsi Berhubungan Dengan user==========================================================================================//
+//Fungsi Berhubungan Dengan User==========================================================================================//
 //========================================================================================================================//
-	public function bio($user=null)
+	public function profile($user=null)
 	{
 		$this->load->model('User_Model');
 		$this->load->model('Pathgetter_Model');
-		$current['activetab'] = 'bio';
+		$current['activetab'] = 'profile';
 		$this->load->view('template/dashboard_header');
 		$this->load->view('template/dashboard_nav',$current);
 		$this->load->view('template/dashboard_breadcrumb');
@@ -89,6 +152,35 @@ class Dashboard extends CI_Controller
 		$this->load->view('template/dashboard_breadcrumb');
 		$this->load->view('dashboard_notif');
 		$this->load->view('template/dashboard_footer');
+	}
+
+	public function privatemsg()
+	{
+		$data['activetab'] = 'privatemsg';
+		$this->load->view('template/dashboard_header');
+		$this->load->view('template/dashboard_nav',$data);
+		$this->load->view('template/dashboard_breadcrumb');
+		$this->load->view('dashboard_privatemsg');
+		$this->load->view('template/dashboard_footer');
+
+	}
+
+//========================================================================================================================//
+//Fungsi Berhubungan Dengan Members==========================================================================================//
+//========================================================================================================================//
+	public function members()
+	{
+		$data['activetab'] = 'members';
+		$this->load->model('User_Model');
+		$this->load->view('template/dashboard_header');
+		$this->load->view('template/dashboard_nav',$data);
+		$this->load->view('template/dashboard_breadcrumb');
+		$members['mostmsg'] = $this->User_Model->get_allmember('totalmsg','DESC');
+		$members['mostlikes'] = $this->User_Model->get_allmember('totallikes','DESC');
+		$members['staff'] = $this->User_Model->get_allstaff();
+		$this->load->view('dashboard_members',$members);
+		$this->load->view('template/dashboard_footer');
+
 	}
 
 //========================================================================================================================//
@@ -173,6 +265,16 @@ class Dashboard extends CI_Controller
 	public function thread()
 	{
 		redirect(site_url('Dashboard/threads'));
+	}
+
+	public function createthread()
+	{
+		$data['activetab'] = 'threads';
+		$this->load->view('template/dashboard_header');
+		$this->load->view('template/dashboard_nav',$data);
+		$this->load->view('template/dashboard_breadcrumb');
+		$this->load->view('thread_create');
+		$this->load->view('template/dashboard_footer');
 	}
 
 //========================================================================================================================//

@@ -37,7 +37,7 @@
 							<div class="col-sm-7">
 								<h4><a href="<?=site_url('Dashboard/thread/'.$thread->threadid)?>"><?=$thread->title?></a></h4>
 								<br>
-								<p><a href="<?=site_url('Dashboard/bio/'.$thread->author)?>"><?=$thread->author?></a>, <?=$thread->datecreated?></p>
+								<p><a href="<?=site_url('Dashboard/profile/'.$thread->author)?>"><?=$thread->author?></a>, <?=$thread->datecreated?></p>
 							</div>
 							<div class="col-sm-2">
 								<strong>Views:<?=$thread->views?></strong>
